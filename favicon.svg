@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#050d1e"/>
+      <stop offset="100%" stop-color="#000008"/>
+    </radialGradient>
+    <radialGradient id="sun1g" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#ffe880"/>
+      <stop offset="60%" stop-color="#ff8020"/>
+      <stop offset="100%" stop-color="#cc3000"/>
+    </radialGradient>
+    <radialGradient id="sun2g" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#fff0a0"/>
+      <stop offset="60%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#cc6600"/>
+    </radialGradient>
+    <radialGradient id="sun3g" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#fff8c0"/>
+      <stop offset="70%" stop-color="#ffee60"/>
+      <stop offset="100%" stop-color="#cc9900"/>
+    </radialGradient>
+    <radialGradient id="earthg" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#60b0ff"/>
+      <stop offset="40%" stop-color="#1a60cc"/>
+      <stop offset="80%" stop-color="#0a3080"/>
+      <stop offset="100%" stop-color="#040e28"/>
+    </radialGradient>
+    <radialGradient id="vign" cx="50%" cy="50%" r="50%">
+      <stop offset="65%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,.55)"/>
+    </radialGradient>
+    <filter id="s1f" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="s2f" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="s3f" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="ef" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="tg" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="ec"><circle cx="256" cy="300" r="68"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+
+  <!-- Stars -->
+  <circle cx="42"  cy="38"  r="1.2" fill="white" opacity=".7"/>
+  <circle cx="118" cy="22"  r="0.8" fill="white" opacity=".5"/>
+  <circle cx="195" cy="55"  r="1.5" fill="white" opacity=".6"/>
+  <circle cx="310" cy="18"  r="1.0" fill="white" opacity=".8"/>
+  <circle cx="388" cy="44"  r="1.3" fill="white" opacity=".6"/>
+  <circle cx="460" cy="30"  r="0.9" fill="white" opacity=".5"/>
+  <circle cx="478" cy="110" r="1.4" fill="white" opacity=".7"/>
+  <circle cx="500" cy="190" r="0.8" fill="white" opacity=".4"/>
+  <circle cx="490" cy="310" r="1.2" fill="white" opacity=".6"/>
+  <circle cx="30"  cy="180" r="1.1" fill="white" opacity=".6"/>
+  <circle cx="18"  cy="290" r="0.8" fill="white" opacity=".4"/>
+  <circle cx="38"  cy="400" r="1.3" fill="white" opacity=".7"/>
+  <circle cx="90"  cy="470" r="0.9" fill="white" opacity=".5"/>
+  <circle cx="210" cy="490" r="1.1" fill="white" opacity=".6"/>
+  <circle cx="360" cy="498" r="0.8" fill="white" opacity=".4"/>
+  <circle cx="440" cy="480" r="1.4" fill="white" opacity=".7"/>
+  <circle cx="155" cy="150" r="0.7" fill="white" opacity=".4"/>
+  <circle cx="80"  cy="320" r="0.9" fill="white" opacity=".5"/>
+  <circle cx="420" cy="160" r="0.7" fill="white" opacity=".4"/>
+  <circle cx="350" cy="440" r="1.0" fill="white" opacity=".6"/>
+
+  <!-- Sun glows -->
+  <circle cx="112" cy="108" r="52" fill="#ff6010" filter="url(#s1f)" opacity=".55"/>
+  <circle cx="370" cy="92"  r="36" fill="#ffaa00" filter="url(#s2f)" opacity=".5"/>
+  <circle cx="256" cy="62"  r="26" fill="#ffee80" filter="url(#s3f)" opacity=".5"/>
+
+  <!-- Orbital paths -->
+  <ellipse cx="256" cy="300" rx="155" ry="48" fill="none"
+    stroke="rgba(80,140,255,.18)" stroke-width="1.5" stroke-dasharray="8,14"/>
+  <ellipse cx="256" cy="300" rx="96"  ry="30" fill="none"
+    stroke="rgba(80,140,255,.12)" stroke-width="1" stroke-dasharray="5,10"/>
+
+  <!-- Earth glow -->
+  <circle cx="256" cy="300" r="80" fill="#1a50cc" filter="url(#ef)" opacity=".35"/>
+  <!-- Earth as emoji - looks photorealistic on all devices -->
+  <text x="256" y="344" text-anchor="middle" font-size="145">🌍</text>
+  <!-- Atmosphere halo over emoji -->
+  <circle cx="256" cy="300" r="76" fill="none" stroke="rgba(100,180,255,.22)" stroke-width="14"/>
+  <circle cx="256" cy="300" r="76" fill="none" stroke="rgba(60,140,255,.1)"   stroke-width="26"/>
+
+  <!-- Sun bodies on top -->
+  <circle cx="112" cy="108" r="36" fill="url(#sun1g)"/>
+  <circle cx="370" cy="92"  r="24" fill="url(#sun2g)"/>
+  <circle cx="256" cy="62"  r="16" fill="url(#sun3g)"/>
+  <circle cx="112" cy="108" r="36" fill="none" stroke="rgba(255,200,100,.2)" stroke-width="5"/>
+  <circle cx="370" cy="92"  r="24" fill="none" stroke="rgba(255,210,100,.18)" stroke-width="4"/>
+  <circle cx="256" cy="62"  r="16" fill="none" stroke="rgba(255,240,150,.18)" stroke-width="3"/>
+
+  <!-- Spaceship -->
+  <g transform="translate(338,226) rotate(-38)">
+    <polygon points="10,0 -7,5 -5,0 -7,-5" fill="#80e0ff"/>
+    <rect x="-4" y="-2" width="6" height="4" fill="#b0f0ff" rx="1"/>
+    <circle cx="-8"  cy="0" r="3.5" fill="rgba(0,200,255,.7)"/>
+    <circle cx="-12" cy="0" r="2.5" fill="rgba(0,200,255,.3)"/>
+    <circle cx="-16" cy="0" r="1.5" fill="rgba(0,200,255,.15)"/>
+  </g>
+  <g transform="translate(180,356) rotate(55)" opacity=".8">
+    <polygon points="8,0 -5,4 -4,0 -5,-4" fill="#80e0ff"/>
+    <circle cx="-6" cy="0" r="2.5" fill="rgba(0,200,255,.55)"/>
+    <circle cx="-9" cy="0" r="1.5" fill="rgba(0,200,255,.25)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="256" y="418" text-anchor="middle"
+    font-family="'Arial Black',Arial,sans-serif"
+    font-size="29" font-weight="900" letter-spacing="2"
+    fill="white" filter="url(#tg)" opacity=".95">KRISENKOMMANDO</text>
+  <text x="256" y="447" text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="14" font-weight="bold" letter-spacing="5"
+    fill="rgba(160,210,255,.8)">KRISENKOMMANDO</text>
+
+  <!-- Vignette -->
+  <circle cx="256" cy="256" r="256" fill="url(#vign)"/>
+</svg>
